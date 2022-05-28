@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
     <title>Sign Up</title>
 </head>
 <body>
@@ -13,51 +17,57 @@
             <img src="./jelly2.jpg" alt="Jellyfish in water" class="jellyfish">
             <div class="banner">
                 <img src="./anchor.svg" alt="Anchor icon" class="anchor">
-                <h1 class="batsubyo">Batsubyo</h1>
+                <h1 class="batsubyo">抜錨</h1>
             </div>
         </div>
         <div class="right-side">
-            <div>
-                <p>
+            <div class="header">
+                <h1>
                     This is not a real service! 
                     Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit.
-                </p>
+                </h1>
                 <p>
                     Sign up for this non-existent service.
                 </p>
             </div>
-            <form action="#">
-                <ul>
+
+            <form action="#" class="form">
+                <ul class="form-inner">
                     <li>
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input required type="text" id="first-name" name="first-name" placeholder="John">
                     </li>
                     <li>
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <input required type="text" id="last-name" name="last-name" placeholder="Doe">
                     </li>
                     <li>
                         <label for="email">EMAIL</label>
-                        <input type="mail" id="email" name="email">
+                        <input required type="mail" id="email" name="email" placeholder="john@gmail.com">
                     </li>
                     <li>
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="number" id="phone-number" name="phone-number">
+                        <input required type="tel" autocomplete="tel" id="phone-number" name="phone-number" placeholder="123-456-7890" 
+                        pattern="^(\((\d{3})\)|(\d{3}))-?(\d{3})-?(\d{4})$"
+                        oninvalid="this.setCustomValidity('Please use (123)-123-1234 or 123-123-1234')"
+                        oninput="this.setCustomValidity('')">
                     </li>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password"" name="password"">
+                        <input required type="password" id="password"" name="password">
                     </li>
                     <li>
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm-password" name="confirm-password">
+                        <label for="confirm-password">CONFIRM</label>
+                        <input required type="password" id="confirm-password" name="confirm-password">
                     </li>
                 </ul>
-                <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="">Log in</a></p>
+                <button type="submit" class="create-button">Create Account</button>
             </form>
-    
+            <div class="sign-up-bottom">
+
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>
