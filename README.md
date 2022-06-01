@@ -1,5 +1,7 @@
 # sign-up-form
 
+To practice HTML forms and form validation.
+
 *TO DO*
 1. Fix the white rectangle on the bottom left
 2. Add validation for passwords
